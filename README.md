@@ -1,3 +1,3 @@
 # RestFinal
-Стили взяты с bootstrap\n
+Стили взяты с bootstrap<br>
 ip: файлы еще заливаются на сервер
