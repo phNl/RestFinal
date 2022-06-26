@@ -1,0 +1,29 @@
+{# templates/list/index.html.twig #} {% extends 'base.html.twig' %} {% block
+    body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-light mb-3 mt-3">
+                    <div class="card-body">
+                        <div class="card-header">Меню ресторана</div>
+                            <table class="table">
+                                <tr>
+                                    <th>Название блюда</th>
+                                    <th>Цена</th>
+                                    <th>Вес</th>
+                                </tr>
+                                {% for dish in dishes %}
+                                    <tr>
+                                        <td>{{ dish.name }}</td>
+                                        <td>{{ dish.price }}</td>
+                                        <td>{{ dish.weight }}</td>
+                                        <td><img src="{{ dish.photo }}" alt="Фото нет" width="256" height="256"></td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

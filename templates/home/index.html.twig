@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}РЕСТОРАН!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Это главная страница ресторана!</h1>
+
+    Здесь может быть его описание, как проехать и тд<br>
+    Сверху справа можно перейти на другие страницы<br>
+    Сюда можно добавить блюдо дня:
+    {% if not dish %}
+        Сегодня не тот день, блюда нет :(<br>
+    {% else %}
+        {{ dish.name }}
+        <img src="{{ dish.photo }}" width="256" height="256" alt="Картинки этого блюда нет, представьте его у себя в голове ¯\_(ツ)_/¯"><br>
+    {% endif %}
+
+    Продам гараж
+
+</div>
+{% endblock %}
